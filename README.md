@@ -32,7 +32,9 @@ Apply the Dependency Inversion principle : decouple the webservice dependency fr
 And apply the Dependency Injection design pattern to inject that dependency from outside.
 
 See how this is done:
+
 https://github.com/danushkap/test-bl-with-webrequest/blob/master/BL/MembershipService.cs
 
 See how this design has enabled to test the business rules without having to worry about the webservice call:
+
 https://github.com/danushkap/test-bl-with-webrequest/blob/master/BL.Tests/MembershipService_GetMembershipTypeAsync.cs
