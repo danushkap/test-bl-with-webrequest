@@ -31,8 +31,8 @@ Now how to test the business logic that is in the `GetMembershipType()` without 
 Apply the Dependency Inversion principle : decouple the webservice dependency from the BL method. 
 And apply the Dependency Injection design pattern to inject that dependency from outside.
 
-Refer: https://github.com/danushkap/test-bl-with-webrequest/blob/master/BL/MembershipService.cs
+See how this is done:
+https://github.com/danushkap/test-bl-with-webrequest/blob/master/BL/MembershipService.cs
 
-See how this design enabled to test the business rules without having to worry about the webservice call.
-
+See how this design has enabled to test the business rules without having to worry about the webservice call:
 https://github.com/danushkap/test-bl-with-webrequest/blob/master/BL.Tests/MembershipService_GetMembershipTypeAsync.cs
