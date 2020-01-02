@@ -94,5 +94,21 @@ namespace BL.Tests
             //
             Assert.Equal(MembershipType.NA, membershipType);
         }
+
+        [Fact]
+        public async Task Should_ThrowException_When_RealWebRequestHandlerPassed()
+        {
+            // Arrange
+            //
+            var sUT = new MembershipService(new WebRequestHandler());
+
+            // Act
+            //
+            var exception = await Assert.ThrowsAsync<HttpRequestException>(async () => await sUT.GetMembershipTypeAsync());
+
+            // Assert
+            //
+            Assert.Equal("No such host is known", exception.Message);
+        }
     }
 }

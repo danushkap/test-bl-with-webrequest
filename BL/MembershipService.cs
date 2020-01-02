@@ -23,7 +23,7 @@ namespace BL
         /// </returns>
         public async Task<MembershipType> GetMembershipTypeAsync()
         {
-            var result = await _webRequestHandler.GetStringAsync("https://dummyurl");
+            var result = await _webRequestHandler.GetStringAsync("https://realurl");
 
             var membershipAmount = Convert.ToInt32(result);
 
